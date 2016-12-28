@@ -1,0 +1,11 @@
+{% extends 'base.twig.html' %}
+
+{% block body %}
+    <h1>Liste des articles</h1>
+    <!-- test si empty -->
+    <ol>
+    {% for article in articles %}
+        <a href="" title="{{ article.titre }}"><li>{{ article.titre }}</li></a>
+    {% endfor %}
+    </ol>
+{% endblock %}
