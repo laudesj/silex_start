@@ -5,7 +5,8 @@
     <!-- test si empty -->
     <ol>
     {% for article in articles %}
-        <a href="" title="{{ article.titre }}"><li>{{ article.titre }}</li></a>
+        <a href="{{ path('detail', {id: article.id}) }}" title="{{ article.titre }}"><li>{{ article.titre }}</li></a>
+        | <a href="">modifier</a> | <a href="{{ path('supprimer', {id: article.id}) }}">supprimer</a>
     {% endfor %}
     </ol>
 {% endblock %}

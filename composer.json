@@ -4,7 +4,11 @@
         "doctrine/dbal": "~2.2",
         "twig/twig": "^1.30",
         "symfony/twig-bridge": "^3.2",
-        "symfony/security": "^3.2"
+        "symfony/security": "^3.2",
+        "symfony/form": "^3.2",
+        "symfony/validator": "^3.2",
+        "symfony/config": "^3.2",
+        "symfony/translation": "^3.2"
     },
     "autoload": {
         "psr-4": {"Blog\\": "src"}

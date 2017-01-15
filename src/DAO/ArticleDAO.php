@@ -36,6 +36,14 @@ class ArticleDAO
             throw new \Exception("No article matching id " . $articleId);
     }
 
+    public function delete($articleId) {
+        $result = $this->db->delete('articles', array('id' => $articleId));
+        if($result) {
+            return $result;
+        } else 
+            throw new \Exception("No article matching id " . $articleId);
+    }
+
     private function buildArticle(array $row) {
         $article = new Article();
         $article->setId($row['id']);
