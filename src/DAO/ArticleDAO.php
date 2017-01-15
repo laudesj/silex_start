@@ -44,6 +44,14 @@ class ArticleDAO
             throw new \Exception("No article matching id " . $articleId);
     }
 
+    public function insert($row) {
+        $result = $this->db->insert('articles', $row);
+        if($result) {
+            return $result;
+        } else 
+            throw new \Exception("No article matching id " . $articleId);
+    }
+
     private function buildArticle(array $row) {
         $article = new Article();
         $article->setId($row['id']);
